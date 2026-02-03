@@ -1,4 +1,4 @@
-# Empatherapy
+# empatherapy
 
 Soul-rooted healing practice website.
 
@@ -9,5 +9,6 @@ Live at: https://empatherapy.co
 - Psychedelic Integration
 - EER - Emotional Emergency Room  
 - 1:1 Empatherapy Sessions
+
 
 Built with GitHub Pages.
