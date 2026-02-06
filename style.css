@@ -421,3 +421,75 @@ html {
 ## FILE 11: CNAME
 ```
 empatherapy.co
+/* 4-COLUMN GRID FOR "HOW IT WORKS" */
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* RESPONSIVE: Stack on mobile */
+@media (max-width: 1024px) {
+    .how-it-works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+---
+
+## BACKEND TRACKING SYSTEM FOR THERAPIST COMMISSIONS
+
+### GOOGLE SHEETS SETUP
+
+**Create 2 Google Sheets:**
+
+1. **Lead Tracking Sheet**
+2. **Commission Calculation Sheet**
+
+---
+
+### SHEET 1: LEAD TRACKING
+
+**Columns:**
+- A: Date
+- B: Client Name
+- C: Client Email
+- D: Service Type
+- E: Therapist Name
+- F: Session Status (Inquiry / Discovery Call / Booked / Completed / Cancelled)
+- G: Session Fee (AUD)
+- H: Commission (25% = formula: =G2*0.25)
+- I: Payment Status (Pending / Paid)
+- J: Notes
+
+**Google Form for Therapists to Report Sessions:**
+
+Create form with:
+1. Therapist Name (dropdown: Cassidy, etc.)
+2. Client Name
+3. Client Email
+4. Service Type (dropdown: 1:1 Empatherapy, Integration, FreeTheDream, EER)
+5. Session Fee (number)
+6. Session Status (dropdown: Booked, Completed, Cancelled)
+7. Notes (optional)
+
+**Form → Automatically populates Sheet 1**
+
+---
+
+### SHEET 2: COMMISSION DASHBOARD
+
+**Summary view:**
+```
+Therapist Name | Total Sessions | Total Revenue | Total Commission Owed | Paid | Balance
+
+Cassidy        | =COUNTIF(Sheet1!C:C,"Cassidy") | =SUMIF(Sheet1!C:C,"Cassidy",Sheet1!G:G) | =SUMIF(Sheet1!C:C,"Cassidy",Sheet1!H:H) | [manual entry] | =D2-E2
+
