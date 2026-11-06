@@ -1,0 +1,73 @@
+/* HOPEIUM — gentle, human, nature-led */
+:root{--hope-paper:#f6f3ec;--hope-paper-deep:#ebe6da;--hope-ink:#2d3b32;--hope-muted:#68746a;--hope-forest:#526b59;--hope-forest-dark:#344b3b;--hope-sage:#a9b7a0;--hope-gold:#c9a978;--hope-line:rgba(45,59,50,.15)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--hope-paper);color:var(--hope-ink);font-family:'Lato',Arial,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.hope-wrap{overflow:hidden}
+.hope-container{width:min(1120px,88vw);margin:0 auto}
+.hope-header{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:rgba(246,243,236,.96);padding:0 6vw;border-bottom:1px solid var(--hope-line)}
+.hope-brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;letter-spacing:.16em;color:var(--hope-forest-dark);line-height:1}
+.hope-brand small{display:block;font:10px 'Lato',Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--hope-muted);margin-top:6px}
+.hope-nav{display:flex;align-items:center;gap:26px;font-size:13px;color:#566258}
+.hope-nav a:hover,.hope-footer a:hover{color:var(--hope-forest)}
+.hope-nav .nav-cta{padding:10px 17px;border:1px solid var(--hope-forest);border-radius:30px;color:var(--hope-forest)}
+.hope-hero{position:relative;min-height:650px;display:grid;align-items:center;background:#52685a;color:#fff;isolation:isolate}
+.hope-hero:before{content:"";position:absolute;inset:0;z-index:-2;background:url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2200&q=85') center 48%/cover}
+.hope-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(27,48,36,.78) 0%,rgba(35,57,43,.52) 47%,rgba(35,57,43,.12) 100%),linear-gradient(0deg,rgba(27,45,34,.22),transparent 50%)}
+.hope-hero-content{width:min(650px,88vw);margin-left:max(6vw,calc((100vw - 1120px)/2));padding:100px 0}
+.hope-eyebrow,.hope-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--hope-gold)}
+.hope-hero h1{font:500 clamp(54px,7vw,88px)/.99 'Cormorant Garamond',Georgia,serif;letter-spacing:-.025em;margin:22px 0 20px;color:#fff}
+.hope-hero h1 em{font-weight:400;color:#ead8b9}
+.hope-hero p{max-width:490px;font-size:16px;line-height:1.9;color:rgba(255,255,255,.87)}
+.hope-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:30px}
+.hope-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:.04em;transition:transform .2s,background .2s}
+.hope-btn:hover{transform:translateY(-2px)}
+.hope-btn-primary{background:#e3c99e;color:#2d3b32}
+.hope-btn-light{border:1px solid rgba(255,255,255,.7);color:#fff}
+.hope-caption{font-size:11px!important;color:rgba(255,255,255,.68)!important;margin-top:25px}
+.hope-section{padding:96px 0}
+.hope-intro{display:grid;grid-template-columns:1fr 1.05fr;gap:9vw;align-items:center}
+.hope-section h2{font:500 clamp(36px,4.5vw,57px)/1.08 'Cormorant Garamond',Georgia,serif;letter-spacing:-.02em;color:var(--hope-forest-dark);margin:16px 0 20px}
+.hope-copy{font-size:15px;color:var(--hope-muted);line-height:1.95}
+.hope-lead{font:500 21px/1.6 'Cormorant Garamond',Georgia,serif;color:#405346}
+.hope-aside{background:var(--hope-paper-deep);padding:34px;border-left:2px solid var(--hope-gold)}
+.hope-aside h3{font:500 25px 'Cormorant Garamond',Georgia,serif;margin:0 0 10px;color:var(--hope-forest-dark)}
+.hope-aside p{font-size:14px;line-height:1.9;color:var(--hope-muted);margin:0}
+.hope-soft{background:#fffdf8}
+.hope-heading{text-align:center;max-width:700px;margin:0 auto 44px}
+.hope-heading p{color:var(--hope-muted);font-size:15px}
+.hope-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hope-card{padding:29px 27px;background:var(--hope-paper);border:1px solid var(--hope-line);border-radius:12px}
+.hope-card .number{font:italic 20px 'Cormorant Garamond',Georgia,serif;color:#b47e65}
+.hope-card h3{font:500 25px 'Cormorant Garamond',Georgia,serif;color:var(--hope-forest-dark);margin:17px 0 8px}
+.hope-card p{font-size:13px;line-height:1.85;color:var(--hope-muted);margin:0}
+.hope-founder{background:var(--hope-paper-deep)}
+.hope-founder-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:8vw;align-items:center}
+.hope-founder-portrait{min-height:430px;border-radius:180px 180px 12px 12px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(39,63,47,.05),rgba(39,63,47,.2)),url('https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85') center/cover}
+.hope-founder-portrait:after{content:"A real portrait of Cassidy will be added here";position:absolute;left:18px;right:18px;bottom:18px;padding:10px 12px;text-align:center;border-radius:6px;background:rgba(246,243,236,.88);color:#526354;font-size:10px;letter-spacing:.04em}
+.hope-founder-note{font:italic 25px/1.5 'Cormorant Garamond',Georgia,serif;color:var(--hope-forest-dark);border-left:2px solid var(--hope-gold);padding-left:23px;margin:26px 0}
+.hope-beta{background:var(--hope-forest-dark);color:#fff;padding:70px 0}
+.hope-beta-grid{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center}
+.hope-beta h2{color:#fff;margin:12px 0}
+.hope-beta p{max-width:690px;color:rgba(255,255,255,.78);font-size:14px;line-height:1.9}
+.hope-beta .hope-kicker{color:#e1c69a}
+.hope-beta .hope-btn{background:#e3c99e;color:#2d3b32;white-space:nowrap}
+.hope-scale{background:#fffdf8;border:1px solid var(--hope-line);padding:28px;border-radius:12px;margin-top:24px}
+.hope-scale label{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hope-muted)}
+.hope-scale-value{font:500 39px 'Cormorant Garamond',Georgia,serif;color:var(--hope-forest-dark);margin:8px 0}
+.hope-scale input{width:100%;accent-color:var(--hope-forest);margin:12px 0}
+.hope-scale-meta{display:flex;justify-content:space-between;font-size:10px;color:var(--hope-muted)}
+.hope-scale small{display:block;color:var(--hope-muted);font-size:11px;line-height:1.7;margin-top:13px}
+.hope-safety{font-size:11px!important;line-height:1.8!important;color:rgba(255,255,255,.62)!important;margin-top:22px}
+.hope-footer{padding:38px 0;background:#263a2e;color:#f6f3ec}
+.hope-footer-row{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.hope-footer p{font-size:11px;color:rgba(255,255,255,.62);margin:8px 0 0}
+.hope-footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.8)}
+@media(max-width:760px){
+ .hope-header{height:auto;min-height:72px;padding:14px 6vw;align-items:flex-start}.hope-nav{gap:12px;flex-wrap:wrap;justify-content:flex-end;font-size:11px}.hope-nav a:not(.nav-cta){display:none}
+ .hope-hero{min-height:650px}.hope-hero-content{margin-left:7vw;padding:80px 0}.hope-hero h1{font-size:61px}.hope-hero p{font-size:14px}
+ .hope-section{padding:72px 0}.hope-intro,.hope-founder-grid,.hope-beta-grid{grid-template-columns:1fr;gap:30px}.hope-cards{grid-template-columns:1fr}.hope-founder-portrait{min-height:360px;max-width:430px;width:100%;margin:auto}.hope-beta-grid .hope-btn{justify-self:start}.hope-footer-row{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hope-btn{transition:none}}
