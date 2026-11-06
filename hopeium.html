@@ -106,10 +106,10 @@
         </div>
         <div class="hope-scale">
           <label for="hope-contribution">Explore a contribution</label>
-          <div class="hope-scale-value" id="hope-amount">€15</div>
+          <div class="hope-scale-value" id="hope-amount">Supported</div>
           <input id="hope-contribution" type="range" min="0" max="4" value="2" step="1">
-          <div class="hope-scale-meta"><span>Lower contribution</span><span>Pay it forward</span></div>
-          <small id="hope-tier">A supported contribution. Example amounts only; the final sliding scale will be agreed transparently before booking.</small>
+          <div class="hope-scale-meta"><span>Need-based</span><span>Pay it forward</span></div>
+          <small id="hope-tier">Choose the contribution level that feels possible. Exact amounts and currency will be agreed before launch.</small>
           <div style="margin-top:22px">
             <a class="hope-btn hope-btn-primary" href="mailto:hello@empatherapy.co?subject=HOPEIUM%20support%20enquiry">Ask about a conversation →</a>
           </div>
@@ -143,13 +143,13 @@
   const amount=document.getElementById('hope-amount');
   const tier=document.getElementById('hope-tier');
   const options=[
-    ['€0','A supported place — no contribution required.'],
-    ['€8','A lower contribution.'],
-    ['€15','A supported contribution.'],
-    ['€25','A standard contribution.'],
-    ['€40','Pay it forward — helping widen access.']
+    ['Need-based','A supported place.'],
+    ['Lower','A lower contribution.'],
+    ['Supported','A supported contribution.'],
+    ['Standard','A standard contribution.'],
+    ['Pay it forward','A contribution that helps widen access.']
   ];
-  function update(){const selected=options[Number(slider.value)];amount.textContent=selected[0];tier.textContent=selected[1]+' Example amounts only; the final sliding scale will be agreed transparently before booking.';}
+  function update(){const selected=options[Number(slider.value)];amount.textContent=selected[0];tier.textContent=selected[1]+' Exact amounts and currency will be agreed before launch.';}
   slider.addEventListener('input',update);update();
 })();
 </script>
